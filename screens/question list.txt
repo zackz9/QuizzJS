@@ -1,0 +1,40 @@
+ 
+ *** Questions List ***
+
+ Q.1: What color eyes do most humans have?
+       option 0 : black
+       option 1 : brown
+       option 2 : blue
+       option 3 : gray
+
+ Q.2: Which country consumes the most chocolate per capita?
+       option 0 : france
+       option 1 : switzerland
+       option 2 : russia 
+       option 3 : morocco
+
+Q.3: 3 + 4 = 7 ?
+       option 0 : true
+       option 1 : false
+
+
+Q.4: What time of day do we have breakfast?
+      option 0 : In the afternoon
+      option 1 : In the evening
+      option 2 : In the morning
+
+Q.5: What is 22 + 6?
+      option 0 : 99
+      option 1 : 56
+      option 2 : 16
+      option 3 : 78
+      
+Q.5: What is 22 + 6?
+      option 0 : 99
+      option 1 : 56
+      option 2 : 16
+      option 3 : 78
+
+    
+
+

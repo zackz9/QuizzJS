@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+html {
+  background: url(../img/ant.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {
+  margin: 0;
+  font-size: 1rem;
+  color: #f8f8ff;
+  font-family: "Montserrat", sans-serif;
+}
+* {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.customBox {
+  max-width: 700px;
+  background-color: #000000;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 5px;
+  animation: fadeInRight 1s ease-in-out forwards;
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.customBox:after,
+.customBox:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.customBox.hide {
+  display: none;
+}
+.homeBox h3 {
+  line-height: 22px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+}
+.homeBox p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+}
+.homeBox p span {
+  font-weight: bold;
+  color: #f8f8ff;
+}
+.btn {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+  background-color: #;
+  border: none;
+  cursor: pointer;
+  padding: 15px 40px;
+  display: inline-block;
+}
+.quizBox .btn {
+  margin: 15px 0;
+  background-color: #008eff;
+  transition: all 0.5s ease-out;
+}
+.quizBox .nextQuestionButton,
+.quizBox .questionText,
+.quizBox .optionContainer,
+.quizBox .answersIndicator,
+.quizBox .questionNumber {
+  width: 100%;
+  float: left;
+}
+
+.quizBox .questionNumber {
+  font-size: 1.2rem;
+  color: #dc012c;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  line-height: 25px;
+}
+.quizBox .questionText {
+  font-size: 22px;
+  color: white;
+  line-height: 28px;
+  font-weight: 400;
+  padding: 20px 0;
+  margin: 0;
+}
+.quizBox .optionContainer {
+}
+.quizBox .optionContainer .option {
+  color: white;
+  background-color: #ccc;
+  padding: 15px;
+  cursor: pointer;
+  line-height: 1.2rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  opacity: 0;
+  text-transform: capitalize;
+  animation: fadeIn 0.4s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.quizBox .optionContainer .option.no-repeat {
+  text-transform: capitalize;
+  pointer-events: none;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.quizBox .optionContainer .option.correct::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #21e621b8;
+  z-index: -1;
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transfrorm: translateX(-100%);
+  }
+}
+
+.quizBox .optionContainer .option.wrong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #e40000c4;
+  z-index: -1;
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.quizBox .optionContainer .option.correct,
+.quizBox .optionContainer .option.wrong {
+  color: whitesmoke;
+}
+.quizBox .answersIndicator {
+  border-top: 1px solid #ccc;
+}
+.quizBox .answersIndicator div {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.quizBox .answersIndicator div.correct {
+  background-color: #21e621b8;
+  background-image: url(../img/correct.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+.quizBox .answersIndicator div.wrong {
+  background-color: #e40000c4;
+  background-image: url(../img/wrong.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+.resultBox {
+  text-align: center;
+}
+.resultBox.hide {
+  display: none;
+}
+.resultBox h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+.resultBox table {
+  width: 100%;
+  margin: 30px 0;
+  border-collapse: collapse;
+}
+.resultBox table td {
+  border: 1px solid #ccc;
+  padding: 8px 0 8px 17px;
+  width: 50%;
+  text-align: left;
+  font-size: 1rem;
+}
+.resultBox .btn {
+  background-color: #008eff;
+  transition: all 0.5s ease-out;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .resultBox .btn {
+    margin-bottom: 15px;
+  }
+}
